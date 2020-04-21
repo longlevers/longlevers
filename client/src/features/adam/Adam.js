@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { appendX, selectAdam } from './adamSlice';
+import { append, selectAdam } from './adamSlice';
 import styles from './Adam.module.css';
 
 export function Adam() {
@@ -13,7 +13,7 @@ export function Adam() {
         <button
           className={styles.button}
           aria-label='Append an X'
-          onClick={() => dispatch(appendX())}
+          onClick={() => dispatch(append('X'))}
         >
           Append an X
         </button>

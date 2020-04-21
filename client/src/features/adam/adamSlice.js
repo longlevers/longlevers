@@ -6,13 +6,13 @@ const adamSlice = createSlice({
     value: 'Adam',
   },
   reducers: {
-    appendX: (state) => {
-      state.value += 'X';
+    append: (state, action) => {
+      state.value += action.payload;
     },
   },
 });
 
-export const { appendX } = adamSlice.actions;
+export const { append } = adamSlice.actions;
 
 export const selectAdam = (state) => state.adam.value;
 
